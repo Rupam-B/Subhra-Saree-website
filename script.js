@@ -56,6 +56,7 @@ const data = [
 ];
 
 const sareeList = data.map((saree) => {
+  // console.log(saree.id);
   return `<div class="col mx-10"  key="${saree.id}">
   <div  class="card shadow-sm">
       <img
@@ -106,8 +107,9 @@ const sareeContainer = document.querySelector(".sareeList");
 sareeContainer.innerHTML = sareeList.join("");
 
 const purchaseGateway = (id, name, price) => {
-  console.log(id, name, price);
+  // console.log(id, name, price);
   const userCart = {
+    id: id,
     name: name,
     price: price,
   };
